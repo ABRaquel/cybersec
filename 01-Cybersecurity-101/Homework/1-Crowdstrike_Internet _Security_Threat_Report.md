@@ -23,31 +23,46 @@ WICKED PANDA is a state-sponsored hacking group originating from PRC (China).
 ```
 OUTLAW SPIDER was the first outfit that combined ransomware with data exfiltration/extortion.
 ```
-What is an access broker? 
-
-
-Explain a credential-based attack.
-
-
-Who is credited for the heavy adoption of data extortion in ransomware campaigns?
-
-
-What is a DLS?
-
-
-According to Crowdstrike Falcon OverWatch, what percentage of intrusions came from eCrime intrusions in 2020? 
-
-
-
-Who was the most reported criminal adversary of 2020? 
-
-
-Explain how SPRITE SPIDER and CARBON SPIDER impacted virtualization infrastructures.
-
-
-What role does an Enabler play in an eCrime ecosystem?
-
-
-What are the three parts of the eCrime ecosystem that CrowdStrike highlighted in their report?
-	
-What is the name of the malicious code used to exploit a vulnerability in the SolarWinds Orion IT management software?
+#### **6. What is an access broker?**
+```
+Access broker is an outfit that sells backend access to an organization once infiltrated
+```
+#### **7. Explain a credential-based attack.**
+```
+A threat actor will scan and exploit remote services, looking for system weaknesses, the harvest credentials through brute force, 
+or other variants (e.g., password spraying, credential stuffing) to gain access victim's network.
+```
+#### **8. Who is credited for the heavy adoption of data extortion in ransomware campaigns?**
+```
+TWISTED SPIDER is credited with its heavy use of data extortion in ransomware attacks.
+```
+#### **9. What is a DLS?**
+```
+DLS stands for "Dedicated Leak Sites." These sites host the victim's exfiltrated data.
+```
+#### **10. According to Crowdstrike Falcon OverWatch, what percentage of intrusions came from eCrime intrusions in 2020?**
+```
+eCrime accounted for 79% of all intrusion campaigns in 2020. A ten percent increase from 2019.
+```
+#### **11. Who was the most reported criminal adversary of 2020?**
+```
+WIZARD SPIDER was for the second year the most reported threat actor.
+```
+#### **12. Explain how SPRITE SPIDER and CARBON SPIDER impacted virtualization infrastructures.**
+```
+Both threat actors deployed their Linux versions of ransomware, specifically targeting Type 1 Hypervisor ESXi. 
+Doing so allowed the threat actor to inflict more significant damage by infecting all the VMs managed by the host.
+```
+#### **13. What role does an Enabler play in an eCrime ecosystem?**
+```
+These threat actors sell MaaS (Malware-as-a-Service), specializing in delivery and initial exploit to sell access to the victim's systems.
+```
+#### **14. What are the three parts of the eCrime ecosystem that CrowdStrike highlighted in their report?**
+```
+eCrime ecosystem consists of Services (e.g., access brokers, RaaS, MaaS, etc.), Distribution (e.g., Phishing campaigns, social network/IM spam, etc.), 
+and Monetization (e.g., money laundering, wire fraud, ransom payments, and extortion.)
+```	
+#### **15.What is the name of the malicious code used to exploit a vulnerability in the SolarWinds Orion IT management software?**
+```
+The code used in exploiting SolarWinds vulnerability was codenamed SUNBURST.
+```
