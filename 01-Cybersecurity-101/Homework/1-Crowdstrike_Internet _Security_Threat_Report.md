@@ -29,8 +29,8 @@ Access broker is an outfit that sells backend access to an organization once inf
 ```
 #### **7. Explain a credential-based attack.**
 ```
-A threat actor will scan and exploit remote services, looking for system weaknesses, the harvest credentials through brute force, 
-or other variants (e.g., password spraying, credential stuffing) to gain access victim's network.
+A threat actor will scan and exploit remote services, looking for system weaknesses, the harvest credentials through 
+brute force,  or other variants (e.g., password spraying, credential stuffing) to gain access victim's network.
 ```
 #### **8. Who is credited for the heavy adoption of data extortion in ransomware campaigns?**
 ```
@@ -55,12 +55,13 @@ Doing so allowed the threat actor to inflict more significant damage by infectin
 ```
 #### **13. What role does an Enabler play in an eCrime ecosystem?**
 ```
-These threat actors sell MaaS (Malware-as-a-Service), specializing in delivery and initial exploit to sell access to the victim's systems.
+These threat actors sell MaaS (Malware-as-a-Service), specializing in delivery and initial exploit to sell access
+to the victim's systems.
 ```
 #### **14. What are the three parts of the eCrime ecosystem that CrowdStrike highlighted in their report?**
 ```
-eCrime ecosystem consists of Services (e.g., access brokers, RaaS, MaaS, etc.), Distribution (e.g., Phishing campaigns, social network/IM spam, etc.), 
-and Monetization (e.g., money laundering, wire fraud, ransom payments, and extortion.)
+eCrime ecosystem consists of Services (e.g., access brokers, RaaS, MaaS, etc.), Distribution (e.g., Phishing campaigns, 
+social network/IM spam, etc.), and Monetization (e.g., money laundering, wire fraud, ransom payments, and extortion.)
 ```	
 #### **15.What is the name of the malicious code used to exploit a vulnerability in the SolarWinds Orion IT management software?**
 ```
