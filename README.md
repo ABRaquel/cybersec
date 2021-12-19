@@ -1,2 +1,1 @@
-# cybersec
-# UofM Cybersecurity Bootcamp HMW
+## UofM Cybersecurity Bootcamp HMW Repository
