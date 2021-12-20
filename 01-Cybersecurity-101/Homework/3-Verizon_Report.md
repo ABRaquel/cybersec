@@ -48,5 +48,5 @@ Credentials are the most sought-after data for hackers.
 ```
 #### 7. What was the percentage of breaches involving phishing?
 ```
-Phishing accounts for 36 percent of breaches—a significant increase due to the pandemic.
+Phishing accounts for 36 percent of breaches—an 11 percent increase from the previous year.
 ```
