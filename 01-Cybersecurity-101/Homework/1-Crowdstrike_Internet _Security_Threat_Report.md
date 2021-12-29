@@ -17,7 +17,7 @@ Industrial and Engineering, closely followed by Manufacturing.
 ```
 #### **4. What is WICKED PANDA? Where do they originate from?**
 ```
-WICKED PANDA is a state-sponsored hacking group originating from PRC (China).
+WICKED PANDA is a state-sponsored hacking group originating from the PRC (China).
 ```
 #### **5. Which ransomware actor was the first observed using data extortion in a ransomware campaign?**
 ```
