@@ -4,7 +4,7 @@
 #### 1. What was the most vulnerable and targeted element of the gaming industry between October 2019 to September 2020?
 ```
 The most vulnerable and weakest element targeted was the players (users). The human factor continues 
-to be the weakest link in all domains, including gaming.
+to be the weakest link in all areas, including gaming.
 ```
 #### 2. From October 2019 to September 2020, which month did the financial services industry have the most daily web application attacks? 
 ```
