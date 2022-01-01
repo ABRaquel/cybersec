@@ -38,7 +38,7 @@ Answer the following questions:
 3. What methods would you use to measure how often employees are currently _not_ behaving according to the preferred behavior?
 >  * Run access logs within Slack to get the user_agent on what type of device is being used to access Slack, same thing can be done either for G-Suite or Office 365 (unknown type of exchange for this company.)
 \
->NOTE: The problem with internal surveys, is that you need buy-in to get it completed and a push from leads to their direct reports. From personal experience, even a survey asking what kind of holiday swag staff want, takes time and a lot of reminders. The carrot and the stick approach not always works.
+>**NOTE:** The problem with internal surveys, is that you need buy-in to get it completed and a push from leads to their direct reports. From personal experience, even a survey asking what kind of holiday swag staff want, takes time and a lot of reminders. The carrot and the stick approach not always works.
 
 4. What is the goal that you would like the organization to reach regarding this behavior?
 >   * All access to work data will be compliant using app protection policies.
@@ -49,20 +49,20 @@ Answer the following questions:
 Now that you have a goal in mind, who needs to be involved?  
 
 >* Security Team:
-  * This team will be responsible for research and implementation of the new security rules.
+>  * This team will be responsible for research and implementation of the new security rules.
 They are also responsible for creating the reports and framework of said rules, specifically the justification for why it's being implemented, including potential costs.
 
 >* IT Helpdesk:
-  * IT Team will be handle end-user support and create how-to guides if required.
+>  * IT Team will be handle end-user support and create how-to guides if required.
 
 >* Communications Team:
-  * The communications team will draft an all staff communications announcing the changes, and also be a second set of eyes on the how-to guides. Specifically for clarity and how easy it is to follow any changes.
+>  * The communications team will draft an all staff communications announcing the changes, and also be a second set of eyes on the how-to guides. Specifically for clarity and how easy it is to follow any changes.
 
 >* HR Team:
-  * HR team will handle any possible changes to the acceptable use policy in the employee handbook.
+>  * HR team will handle any possible changes to the acceptable use policy in the employee handbook.
 
 >* C-Suite/Management Team:
-  * Notification and buy-in from all department leads and C-Suite. Especially as to why, how and timeframe of such implementation.
+>  * Notification and buy-in from all department leads and C-Suite. Especially as to why, how and timeframe of such implementation.
 
 ---
 #### Step 3: Training Plan
