@@ -49,35 +49,35 @@ Answer the following questions:
 Now that you have a goal in mind, who needs to be involved?  
 
 >* Security Team:
->  * This team will be responsible for research and implementation of the new security rules.
+>    * This team will be responsible for research and implementation of the new security rules.
 They are also responsible for creating the reports and framework of said rules, specifically the justification for why it's being implemented, including potential costs.
 
 >* IT Helpdesk:
->  * IT Team will be handle end-user support and create how-to guides if required.
+>   * IT Team will be handle end-user support and create how-to guides if required.
 
 >* Communications Team:
->  * The communications team will draft an all staff communications announcing the changes, and also be a second set of eyes on the how-to guides. Specifically for clarity and how easy it is to follow any changes.
+>    * The communications team will draft an all staff communications announcing the changes, and also be a second set of eyes on the how-to guides. Specifically for clarity and how easy it is to follow any changes.
 
 >* HR Team:
->  * HR team will handle any possible changes to the acceptable use policy in the employee handbook.
+>    * HR team will handle any possible changes to the acceptable use policy in the employee handbook.
 
 >* C-Suite/Management Team:
->  * Notification and buy-in from all department leads and C-Suite. Especially as to why, how and timeframe of such implementation.
+>   * Notification and buy-in from all department leads and C-Suite. Especially as to why, how and timeframe of such implementation.
 
 ---
 #### Step 3: Training Plan
 
 Training is part of any security culture framework plan. How will you train your employees on this security concern? In one page, indicate the following:
 
-* How frequently will you run training? What format will it take? (i.e. in-person, online, a combination of both)
+1. How frequently will you run training? What format will it take? (i.e. in-person, online, a combination of both)
 >  * Training on initial implementation, online only with access to IT Helpdesk for any questions. Following the initial training, it can be done on-demand upon new staff starting, and keeping it part of an internal wiki/kb for reference.
 
 
-* What topics will you cover in your training and why? (This should be the bulk of the deliverable.)
+2. What topics will you cover in your training and why? (This should be the bulk of the deliverable.)
 >  * The topics will be how to setup PIN/Biometric authentication once app protection policies are turned on. Best practices on installing apps and a secure/clean device.
 
 
-* After you’ve run your training, how will you measure its effectiveness?
+3. After you’ve run your training, how will you measure its effectiveness?
 >  * Effectiveness is measured by enforcing app protection policies for all unmanaged devices. Requiring PIN/Biometric to access *[Slack](https://slack.com/help/articles/360033808693-Require-a-mobile-passcode-on-Enterprise-Grid-)*, likewise for *[Office 365](https://docs.microsoft.com/en-us/mem/intune/apps/app-protection-policy)* and *[G-Suite](https://cloud.google.com/identity/solutions/secure-corp-on-personal-devices)*. *-- unknown what type of email exchange is being used.* Once access controls are turned on, use reporting tools to create a report on what type of user_agent is being used and if the security policy is active.
 
 ---
@@ -91,34 +91,34 @@ Training alone often isn't the entire solution to a security concern.
 
 #### Solution 1: Data Access Restriction on Non-Managed Devices
 
-- What type of control is it? Administrative, technical, or physical?
+1. What type of control is it? Administrative, technical, or physical?
 > - Technical.
 
 
-- What goal does this control have? Is it preventive, deterrent, detective, corrective, or compensating?
+2. What goal does this control have? Is it preventive, deterrent, detective, corrective, or compensating?
 > - Preventive.  
 
 
-- What is one advantage of each solution?
+3. What is one advantage of each solution?
 > - Complete control on how data is accessed.
 
 
-- What is one disadvantage of each solution?
+4. What is one disadvantage of each solution?
 > - Allowing only managed devices to access any data can impede productivity, it can also be costly if the company needs to provide a mobile device to every staff.
 
 #### Solution 2: Acceptable Use policy
 
-- What type of control is it? Administrative, technical, or physical?
+1. What type of control is it? Administrative, technical, or physical?
 > - Administrative
 
 
-- What goal does this control have? Is it preventive, deterrent, detective, corrective, or compensating?
+2. What goal does this control have? Is it preventive, deterrent, detective, corrective, or compensating?
 > -  Deterrent.
 
 
-- What is one advantage of each solution?
+3. What is one advantage of each solution?
 > -  Easy and cost effective, only requiring an update to the employee handbook and requiring all employees to adhere to it.
 
 
-- What is one disadvantage of each solution?
+4. What is one disadvantage of each solution?
 > - Can't prevent an employee from accessing the data from their own device. Reporting can be used to see who is accessing data from a personal device and apply corrective measures.
