@@ -1,5 +1,4 @@
 ```
-
 03-Terminal-and-Bash/homework/
 ├─ notes/
 │  ├─ Notes_Dealer_Analysis
