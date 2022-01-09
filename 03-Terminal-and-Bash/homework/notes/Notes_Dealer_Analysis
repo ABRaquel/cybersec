@@ -1,0 +1,4 @@
+Primary worker at Roulette was Billy Jones.
+# Found using ./dealer_analysis.sh script
+Billy Jones was present fifteen times.
+# Used wc -l Dealers_working_during_losses
