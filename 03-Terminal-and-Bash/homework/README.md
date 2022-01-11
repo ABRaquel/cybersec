@@ -15,3 +15,14 @@
 |  ├─ roulette_dealer_finder_by_time_and_game.sh
 ├─ README.md
 ```
+### Player Analysis
+![Player Analysis](/03-Terminal-and-Bash/homework/screenshots/player_analysis.jpg)
+
+### Dealer Analysis
+![Dealer Analysis](/03-Terminal-and-Bash/homework/screenshots/dealer_analysis.jpg)
+
+### Roulette Finder by Time
+![Roulette Finder by Time](/03-Terminal-and-Bash/homework/screenshots/roulette_dealer_finder_by_time.jpg)
+
+### Roulette Finder by Time and Game
+![Roulette Finder by Time and Game](/03-Terminal-and-Bash/homework/screenshots/roulette_dealer_finder_by_time_and_game.jpg)
