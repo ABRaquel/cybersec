@@ -71,7 +71,7 @@
 4. Provide a report from the Lynis output on what can be done to harden the system.
 
     - Screenshot of report output:
-
+![Linys report](/04-Linux-SysAdmin-Fundamentals/homework/screenshot/lynis_audit.png)
 
 ### Bonus
 1. Command to install chkrootkit: `sudo apt install chkrootkit`
