@@ -4,15 +4,21 @@
 │  ├─ Notes_Dealer_Analysis
 │  ├─ Notes_Player_Analysis
 |  ├─ Notes_Player_Dealer_Correlation
-│  ├─ README.md/.docx
+│  ├─ README.md
 ├─ evidence/
 │  ├─ Roulette_Losses
 │  ├─ Dealers_working_during_losses
-│  ├─ README.md/.docx
+│  ├─ README.md
 ├─ scripts/
 │  ├─ dealer_analysis.sh
 │  ├─ roulette_dealer_finder_by_time.sh
 |  ├─ roulette_dealer_finder_by_time_and_game.sh
+├─ screenshots/
+│  ├─ dealer_analysis.jpg
+│  ├─ player_analysis.jpg
+│  ├─ roulette_dealer_finder_by_time.jpg
+│  ├─ roulette_dealer_finder_by_time_and_game.jpg
+│  ├─ README.md
 ├─ README.md
 ```
 ### Player Analysis
