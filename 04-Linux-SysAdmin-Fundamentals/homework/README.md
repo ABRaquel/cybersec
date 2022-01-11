@@ -71,7 +71,7 @@
 4. Provide a report from the Lynis output on what can be done to harden the system.
 
     - Screenshot of report output:
-![Linys report](/homework/screenshot/lynis_audit.png)
+![Linys report](/04-Linux-SysAdmin-Fundamentals/homework/screenshot/lynis_audit.png)
 
 ### Bonus
 1. Command to install chkrootkit: `sudo apt install chkrootkit`
@@ -81,7 +81,7 @@
 3. Command to run expert mode: `chkrootkit -x`
 
 4. Provide a report from the chrootkit output on what can be done to harden the system.
-![chkrootkit report](/homework/screenshot/chkrootkit.png)
+![chkrootkit report](/04-Linux-SysAdmin-Fundamentals/homework/screenshot/chkrootkit.png)
 
 > Shutdown Apache webserver (port 80), SMB (port 139, 445), POP3 (port 110, 25), FTP (port 21).
 > Remove user jack from `sudo` group.
