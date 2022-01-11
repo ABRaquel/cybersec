@@ -81,6 +81,8 @@
 3. Command to run expert mode: `chkrootkit -x`
 
 4. Provide a report from the chrootkit output on what can be done to harden the system.
+![chkrootkit report](/04-Linux-SysAdmin-Fundamentals/homework/screenshot/chkrootkit.png)
+
 > Shutdown Apache webserver (port 80), SMB (port 139, 445), POP3 (port 110, 25), FTP (port 21).
 > Remove user jack from `sudo` group.
 
