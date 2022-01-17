@@ -64,7 +64,7 @@
 
 1. Command to install Lynis: `sudo apt install lynis`
 
-2. Command to see documentation and instructions: `sudo lynis --help`
+2. Command to see documentation and instructions: `sudo lynis --help` or `man lynis`
 
 3. Command to run an audit: `sudo lynis audit system`
 
@@ -76,7 +76,7 @@
 ### Bonus
 1. Command to install chkrootkit: `sudo apt install chkrootkit`
 
-2. Command to see documentation and instructions: `chkrootkit --help`
+2. Command to see documentation and instructions: `chkrootkit --help` or `man chkrootkit`
 
 3. Command to run expert mode: `chkrootkit -x`
 
