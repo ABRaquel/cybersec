@@ -56,7 +56,7 @@
 4. Change ownership on the new engineers' shared folder to the `engineers` group.
 
     - Command to change ownership of engineer's shared folder to engineer group: 
-        - `sudo chgrp -R engineers /home/engineers`
+        - `sudo chown :engineers /home/engineers`
 
 
 ### Step 4: Lynis Auditing
