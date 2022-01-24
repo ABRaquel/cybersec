@@ -9,13 +9,13 @@ Save and submit the completed file for your homework submission.
 ### Step 1: Create, Extract, Compress, and Manage tar Backup Archives
 
 1. Command to **extract** the `TarDocs.tar` archive to the current directory:
-> `tar xvvf TarDocs.tar` -- vv flag added for increase verbosity.
+> `tar xvvf TarDocs.tar` -- vv flag added for increased verbosity.
 
 2. Command to **create** the `Javaless_Doc.tar` archive from the `TarDocs/` directory, while excluding the `TarDocs/Documents/Java` directory:
 > `tar -cvv --exclude='TarDocs/Documents/Java' -Wf Javaless_Docs2.tar TarDocs/`
 
 3. Command to ensure `Java/` is not in the new `Javaless_Docs.tar` archive:
-> `tar -tvvf Javaless_Docs.tar | grep "Java"
+> `tar -tvvf Javaless_Docs.tar | grep "Java"`
 
 **Bonus**
 - Command to create an incremental archive called `logs_backup_tar.gz` with only changed files to `snapshot.file` for the `/var/log` directory:
@@ -59,9 +59,9 @@ Save and submit the completed file for your homework submission.
 
 **Optional**
 - Commands to test the script and confirm its execution:
-> To execute the script > `./system.sh`
-> To verify output > `ls -l backups/*`
-> Check contents > `head backups/*`
+> * To execute the script > `./system.sh`
+> * To verify output > `ls -l backups/*`
+> * Check contents > `head backups/*`
 
 **Bonus**
 - Command to copy `system` to system-wide cron directory:
@@ -75,9 +75,9 @@ Save and submit the completed file for your homework submission.
 
     Configure a log rotation scheme that backs up authentication messages to the `/var/log/auth.log`.
 
-    - Add your config file edits below:
+- Add your config file edits below:
 
-    ```bash
+```bash
     /var/log/auth.log {
     rotate 7  
     weekly
@@ -87,7 +87,8 @@ Save and submit the completed file for your homework submission.
     nomissingok
     endscript
 }
-    ```
+```
+    
 ---
 
 ### Bonus: Check for Policy and File Violations
@@ -98,9 +99,9 @@ Save and submit the completed file for your homework submission.
 2. Command to set number of retained logs and maximum log file size:
 > `sudo nano /etc/audit/auditd.conf`
 
-    - Add the edits made to the configuration file below:
+- Add the edits made to the configuration file below:
 
-    ```bash
+```bash
     #
     # This file controls the configuration of the audit daemon
     #
@@ -117,7 +118,7 @@ Save and submit the completed file for your homework submission.
     disp_qos = lossy
     dispatcher = /sbin/audispd
     name_format = NONE
-    ```
+```
 
 3. Command using `auditd` to set rules for `/etc/shadow`, `/etc/passwd` and `/var/log/auth.log`:
 >`sudo nano /etc/audit/rules.d/audit.rules`
@@ -168,6 +169,6 @@ Save and submit the completed file for your homework submission.
 
 1. Command to automate the last command in a daily cronjob. Add the edits made to the crontab file below:
 
-    ```bash
+```bash
   0 0 * * * journalctl -p 2 -b > /home/sysadmin/Priority_High.txt >/dev/null 2>&1
-    ```
+```
