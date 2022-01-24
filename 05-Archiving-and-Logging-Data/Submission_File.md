@@ -42,7 +42,7 @@ Save and submit the completed file for your homework submission.
 
 2. Paste your `system.sh` script edits below:
 
-    ```bash
+```bash
     #!/bin/bash
     #available memory
     free > ~/backups/freemem/free_mem.txt
@@ -52,7 +52,7 @@ Save and submit the completed file for your homework submission.
     df -h /dev/sda1 > ~/backups/freedisk/free_disk.txt
     #disk use output
     sudo du -kh / | sort -h > ~/backups/diskuse/disk_usage.txt
-    ```
+ ```
 
 3. Command to make the `system.sh` script executable:
 > `chmod +x system.sh`
@@ -65,7 +65,9 @@ Save and submit the completed file for your homework submission.
 
 **Bonus**
 - Command to copy `system` to system-wide cron directory:
-> `cp system /etc/cron.weekly`
+> `sudo cp system /etc/cron.weekly`
+
+![System Cron](/05-Archiving-and-Logging-Data/screenshots/system_cron.png)
 
 ---
 
@@ -143,7 +145,7 @@ Save and submit the completed file for your homework submission.
 7. Create a user with `sudo useradd attacker` and produce an audit report that lists account modifications:
 > `sudo aureport -m`
 
-[[ SCREENSHOT ]]
+![aureport](/05-Archiving-and-Logging-Data/screenshots/auditd-m.png)
 
 8. Command to use `auditd` to watch `/var/log/cron`:
 >`sudo auditctl -w /var/log/cron`
