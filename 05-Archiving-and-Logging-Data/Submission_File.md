@@ -45,7 +45,7 @@ Save and submit the completed file for your homework submission.
 ```bash
     #!/bin/bash
     #available memory
-    free > ~/backups/freemem/free_mem.txt
+    free -h > ~/backups/freemem/free_mem.txt
     #list of open files
     sudo lsof /dev/null > ~/backups/openlist/open_list.txt
     #free disk space
