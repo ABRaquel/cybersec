@@ -12,7 +12,7 @@ Save and submit the completed file for your homework submission.
 > `tar xvvf TarDocs.tar` -- vv flag added for increased verbosity.
 
 2. Command to **create** the `Javaless_Doc.tar` archive from the `TarDocs/` directory, while excluding the `TarDocs/Documents/Java` directory:
-> `tar -cvv --exclude='TarDocs/Documents/Java' -Wf Javaless_Docs2.tar TarDocs/`
+> `tar -cvvf Javaless_Docs.tar --exclude='TarDocs/Documents/Java' TarDocs/`
 
 3. Command to ensure `Java/` is not in the new `Javaless_Docs.tar` archive:
 > `tar -tvvf Javaless_Docs.tar | grep "Java"`
@@ -84,10 +84,8 @@ Save and submit the completed file for your homework submission.
     rotate 7  
     weekly
     notifempty
-    compress
     delaycompress
-    nomissingok
-    endscript
+    missingok  
 }
 ```
     
@@ -158,7 +156,7 @@ Save and submit the completed file for your homework submission.
 ### Bonus (Research Activity): Perform Various Log Filtering Techniques
 
 1. Command to return `journalctl` messages with priorities from emergency to error:
->`journalctl -p 3 -b`
+>`journalctl -p 3 -b` or `sudo journalctl -b -p emerg..err`
 
 1. Command to check the disk usage of the system journal unit since the most recent boot:
 >`journalctl --disk-usage`
