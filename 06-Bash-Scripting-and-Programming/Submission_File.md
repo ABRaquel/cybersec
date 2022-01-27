@@ -64,9 +64,11 @@ Port 2222
 
 1. SSH back to the system using your `sysd` account and port `2222`:
 
-    - `Your solution command here`
+    - `ssh sysd@192.168.6.105 -p 2222`
 
 2. Escalate your privileges to the `root` user. Use John to crack the entire `/etc/shadow` file:
 
-    - `Your solution command here`
+    - `john /etc/shadow`
+
+![ripper](/06-Bash-Scripting-and-Programming/screenshots/ripper.png)
 
