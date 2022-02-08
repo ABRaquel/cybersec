@@ -1,5 +1,5 @@
-﻿Param([string]$directory = $PWD)
-foreach ($item in $directory) {
+Param([string]$directory = $PWD)
+foreach ($file in $directory) {
    Get-ChildItem $directory -Recurse
-   Get-Acl $item.Fullname
+   Get-Acl $file | ForEach-Object { $_.Access } | Format-Table -Wrap
 }
