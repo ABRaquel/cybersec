@@ -14,10 +14,9 @@ Provide the following:
 - **Deliverable for Task 4:** Submit a copy of your `enum_acls.ps1` script.
 >Link to [enum_acls.ps1](https://github.com/ABRaquel/cybersec/blob/main/07-Windows-Administration-and-Hardening/enum_acls.ps1)
 ```bash
-Param([string]$directory = $PWD)
-foreach ($file in $directory) {
-   Get-ChildItem $directory -Recurse
-   Get-Acl $file | ForEach-Object { $_.Access } | Format-Table -Wrap
+$directory = Get-ChildItem .\
+foreach ($item in $directory) {
+  Get-Acl $item
 }
 ```
 - **Deliverable for Bonus Task 5:** Submit a screenshot of the contents of one of your transcribed PowerShell logs or a copy of one of the logs.
