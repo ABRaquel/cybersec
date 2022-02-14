@@ -35,4 +35,11 @@ With your findings from Phase 2, determine if you can access the server that is 
 ![hosts](/08-Networking-Fundamentals/screenshots/hosts.png)
 ![nslookup](/08-Networking-Fundamentals/screenshots/nslookup.png)
 
+### Phase 4:  _"Sh`ARP` Dressed Man"_
+
+Within the RockStar server that you SSH'd into, and in the same directory as the configuration file from **Phase 3**, the hacker left a note as to where he stored away some packet captures.  
+
+- Ran ``head *`` inside ``/etc`` and grabbed file from a G-Drive share.
+
+
 
