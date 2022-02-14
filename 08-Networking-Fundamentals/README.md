@@ -41,6 +41,8 @@ Within the RockStar server that you SSH'd into, and in the same directory as the
 
 - Ran ``head *`` inside ``/etc`` and grabbed file from a G-Drive share.
 ![head](/08-Networking-Fundamentals/screenshots/headfind.png)
+- Hacker submitted a form through the Contact Us webpage with a ransom demand. Used Wireshark to analayze the packet, form used HTML at the Application layer (Layer 7).
+![wireshark](/08-Networking-Fundamentals/screenshots/wireshark.png)
 
 
 
