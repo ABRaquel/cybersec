@@ -40,6 +40,7 @@ With your findings from Phase 2, determine if you can access the server that is 
 Within the RockStar server that you SSH'd into, and in the same directory as the configuration file from **Phase 3**, the hacker left a note as to where he stored away some packet captures.  
 
 - Ran ``head *`` inside ``/etc`` and grabbed file from a G-Drive share.
+![head](/08-Networking-Fundamentals/screenshots/headfind.png)
 
 
 
