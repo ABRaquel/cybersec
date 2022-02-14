@@ -27,3 +27,12 @@ With the IP(s) found from Phase 1, determine which ports are open:
   - Port 22 for SSH service is open. SSH is an Application Layer protocol.
 ![nmap](/08-Networking-Fundamentals/screenshots/nmap.png)
 
+### Phase 3: _"I Feel a `DNS` Change Comin' On"_
+
+With your findings from Phase 2, determine if you can access the server that is accepting connections.
+
+  - Hosts file modified to redirect rollingstone.com to unknown.yahoo.com at **98.137.246.8**
+![hosts](/08-Networking-Fundamentals/screenshots/hosts.png)
+![nslookup](/08-Networking-Fundamentals/screenshots/nslookup.png)
+
+
