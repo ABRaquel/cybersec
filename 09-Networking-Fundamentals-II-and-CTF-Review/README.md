@@ -2,39 +2,45 @@
 
 ### Mission 1  
 
-- Ran ``nslookup`` followed by ``set q=mx`` at ``starwars.com``
+- Ran ``nslookup -q=mx starwars.com``
 ![mx](/09-Networking-Fundamentals-II-and-CTF-Review/screenshots/mx.png)
 
 - ``asltx.l.google.com`` and the secondary ``asltx.2.google.com`` mail server MX entries are missing from the DNS record.
 
 - MX record should be:
-> - ``Priority 1 | Hostname @ | Value asltx.l.google.com | TTL 300``
-> - ``Priority 5 | Hostname @ | Value asltx.2.google.com | TTL 300``
+
+|Record Type | (sub)Domain/Hostname |  Priority |  Value  |  TTL  |
+|:---   | :----:               |  :----:   |  :----: |  :----:  |
+| **MX**  | @ | 1 | asltx.l.google.com  | 300 |
+| **MX**  | @ | 5 | asltx.2.google.com  | 300 |
 
 ### Mission 2
 
-  - Ran ``nslookup`` followed by ``set q=txt`` at ``theforce.net``.
+  - Ran ``nslookup -q=txt theforce.net``.
+
  ![spf](/09-Networking-Fundamentals-II-and-CTF-Review/screenshots/spf.png)
 
-  - SPF record is missing the IP address for the mail server. As such it's being flagged as coming from untrusted source.
+  - SPF string is missing the IP address for the mail server. As such it's being flagged as coming from untrusted source.
 
   - TXT record should include (not removing old IPs, since I'm unaware if they were deprecated):
- > - ``v=spf1 a mx mx:smtp.secureserver.net include:aspmx.googlemail.com ip4:104.156.250.80 ip4:45.63.15.159 ip4:45.63.4.215 ip4:45.23.176.21``
+
+|Record Type | (sub)Domain/Hostname |  Value  |  TTL  |
+|:---   | :----:               |  :----: |  :----:  |
+| **TXT**  | @ | v=spf1 a mx mx:smtp.secureserver.net include:aspmx.googlemail.com ip4:104.156.250.80 ip4:45.63.15.159 ip4:45.63.4.215 ip4:45.23.176.21  | 3600 |
   
 ### Mission 3
+ 
+  - Ran ``nslookup -q=cname www.theforce.net``.
+ 
+  ![cname](/09-Networking-Fundamentals-II-and-CTF-Review/screenshots/cname.png)
+  
+  - CNAME record needs to be created point the subdomain `resistance` to `theforce.net`.
+  
+  - CNAME record should be:
 
-**Issue**: You have successfully resolved all email issues and the resistance can now receive alert bulletins. However, the Resistance is unable to easily read the details of alert bulletins online. 
-  
-  - They are supposed to be automatically redirected from their sub page of `resistance.theforce.net`  to `theforce.net`.
-
-Your mission:
-  
-  - Document how a CNAME should look by viewing the CNAME of `www.theforce.net` using NSLOOKUP.
-  
-  - Explain why the sub page of `resistance.theforce.net` isn't redirecting to `theforce.net`.
-  
-  - Document what a corrected DNS record should be.
-  
+|Record Type | (sub)Domain/Hostname |  Value  |  TTL  |
+|:---   | :----:               |  :----: |  :----:  |
+| **CNAME**  | resistance | theforce.net  | 3600 |  
   
 ### Mission 4
 
