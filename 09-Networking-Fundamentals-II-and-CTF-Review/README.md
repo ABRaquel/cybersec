@@ -3,6 +3,7 @@
 ### Mission 1  
 
 - Ran ``nslookup -q=mx starwars.com``
+
 ![mx](/09-Networking-Fundamentals-II-and-CTF-Review/screenshots/mx.png)
 
 - ``asltx.l.google.com`` and the secondary ``asltx.2.google.com`` mail server MX entries are missing from the DNS record.
@@ -44,20 +45,15 @@
   
 ### Mission 4
 
-**Issue**: During the attack, it was determined that the Empire also took down the primary DNS server of `princessleia.site`. 
+  - Ran ``nslookup -q=ns princessleia.site``.
 
-- Fortunately, the DNS server for `princessleia.site` is backed up and functioning. 
+![dns](/09-Networking-Fundamentals-II-and-CTF-Review/screenshots/dns.png)
 
-- However, the Resistance was unable to access this important site during the attacks and now they need you to prevent this from happening again.
+  - NS record should be:
 
-- The Resistance's networking team provided you with a backup DNS server of: `ns2.galaxybackup.com`.
-
- Your mission:
-
-  - Confirm the DNS records for `princessleia.site`.
-
-  - Document how you would fix the DNS record to prevent this issue from happening again.
-    
+|Record Type | (sub)Domain/Hostname |  Value  |  TTL  |
+|:---   | :----:               |  :----: |  :----:  |
+| **NS**  | @ |  ns2.galaxybackup.com | 3600 | 
   
 ### Mission 5
 
@@ -104,18 +100,7 @@ Your Mission:
 
 ### Mission 7 
 
-As a thank you for saving the galaxy, the Resistance wants to send you a secret message!
-
-Your Mission:
-
-  - View the DNS record from Mission #4.
-
-  - The Resistance provided you with a hidden message in the `TXT` record, with several steps to follow.
-  
-  - Follow the steps from the `TXT` record.
-    - **Note**: A backup option is provided in the TXT record (as a website) in case the main telnet site is unavailable
-  
-  - Take a screen shot of the results.
+![telnet](/09-Networking-Fundamentals-II-and-CTF-Review/screenshots/telnet.png)
  
   
 
