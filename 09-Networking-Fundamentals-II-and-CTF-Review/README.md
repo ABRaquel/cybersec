@@ -13,21 +13,13 @@
 
 ### Mission 2
 
-**Issue**: Now that you've addressed the mail servers, all emails are coming through. However, users are still reporting that they haven't received mail from the `theforce.net` alert bulletins.
+  - Ran ``nslookup`` followed by ``set q=txt`` at ``theforce.net``.
+ ![spf](/09-Networking-Fundamentals-II-and-CTF-Review/screenshots/spf.png)
 
-- Many of the alert bulletins are being blocked or going into spam folders.
+  - SPF record is missing the IP address for the mail server. As such it's being flagged as coming from untrusted source.
 
-- This is probably due to the fact that `theforce.net` changed the IP address of their mail server to `45.23.176.21` while your network was down.
-
-- These alerts are critical to identify pending attacks from the Empire.
-
-Your mission:
-
-  - Determine and document the `SPF` for `theforce.net` using NSLOOKUP.
-
-  - Explain why the Force's emails are going to spam.
-
-  - Document what a corrected DNS record should be.
+  - TXT record should include (not removing old IPs, since I'm unaware if they were deprecated):
+ > - ``v=spf1 a mx mx:smtp.secureserver.net include:aspmx.googlemail.com ip4:104.156.250.80 ip4:45.63.15.159 ip4:45.63.4.215 ip4:45.23.176.21``
   
 ### Mission 3
 
