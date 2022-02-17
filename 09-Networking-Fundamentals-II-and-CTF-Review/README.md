@@ -57,7 +57,7 @@
   
 ### Mission 5
 
-- OSPF transit link ``1`` > ``15`` > ``11`` > ``8``
+- OSPF transit link ``Batuu`` > ``D`` > ``C`` > ``E`` > ``F`` > ``J`` > ``I`` > ``L`` > ``Q`` > ``T`` > ``V`` > ``Jedha``
   
 ### Mission 6
 
