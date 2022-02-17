@@ -61,29 +61,8 @@
   
 ### Mission 6
 
-**Issue:** Due to all these attacks, the Resistance is determined to seek revenge for the damage the Empire has caused. 
-
-- You are tasked with gathering secret information from the Dark Side network servers that can be used to launch network attacks against the Empire.
-
-- You have captured some of the Dark Side's encrypted wireless internet traffic in the following pcap: [Darkside.pcap](resources/Darkside.pcap).
-
-Your Mission:
-
-- Figure out the Dark Side's secret wireless key by using Aircrack-ng.
-
-  - Hint: This is a more challenging encrypted wireless traffic using WPA.
-
-  - In order to decrypt, you will need to use a wordlist (-w) such as `rockyou.txt`.
-
-- Use the Dark Side's key to decrypt the wireless traffic in Wireshark.
-
-  - Hint: The format for they key to decrypt wireless is `<Wireless_key>:<SSID>`.
-
-- Once you have decrypted the traffic, figure out the following Dark Side information:
-
-  - Host IP Addresses and MAC Addresses by looking at the decrypted `ARP` traffic.
-
-  - Document these IP and MAC Addresses, as the resistance will use these IP addresses to launch a retaliatory attack.
+> - 172.16.0.101 | 00:13:CE:55:98:EF
+> - 172.16.0.1 | 00:0F:66:E3:E4:01
 
 
 ### Mission 7 
