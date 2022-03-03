@@ -8,21 +8,21 @@ The concept of defense in depth can be broken down into three different security
 
 1. Walls, bollards, fences, guard dogs, cameras, and lighting are what type of security control?
 
-    Answer: **Physical control**
+> **Physical control**
 
 2. Security awareness programs, BYOD policies, and ethical hiring practices are what type of security control?
 
-    Answer: **Management Control**
+> **Management Control**
 
 3. Encryption, biometric fingerprint readers, firewalls, endpoint security, and intrusion detection systems are what type of security control?
 
-    Answer: **Data protection**
+> **Data protection**
 
 #### Intrusion Detection and Attack indicators
 
 1. What's the difference between an IDS and an IPS?
 
-    Answer: **IDS (intrusion detection system) monitors network traffic, analyzes for known attacks and alerts to anything suspicous. IPS (intrusion prevention system), it does the same as IDS but with the difference that it stops traffic (rule bases) until its investigated.**
+> **IDS (intrusion detection system) monitors network traffic, analyzes for known attacks and alerts to anything suspicous. IPS (intrusion prevention system), it does the same as IDS but with the difference that it stops traffic (rule bases) until its investigated.**
 
 2. What's the difference between an Indicator of Attack and an Indicator of Compromise?
 
