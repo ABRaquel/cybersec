@@ -26,26 +26,27 @@ The concept of defense in depth can be broken down into three different security
 
 2. What's the difference between an Indicator of Attack and an Indicator of Compromise?
 
-   Answer: 
+> **IoA indicates attacks happening in real time, focusing in detecting the intent of an attacker.
+> While IoC focuses on attacks that have happened, mostly reactive only after exposure to a threat.**
 
 #### The Cyber Kill Chain
 
 Name each of the seven stages for the Cyber Kill chain and provide a brief example of each.
 
-1. Stage 1:
-
+1. Stage 1: 
+> **Reconnaissance ->> Research and identification of target, email harvesting, etc.**
 2. Stage 2:
-
+> **Weaponization ->> Embedding trojan with an exploit into a deliverable payload (e.g. PDF, DOCX, etc.)**
 3. Stage 3:
-
+> **Delivery ->> Delivering exploit to the target, through methods gathering in Stage 1 (Reconnaissance), e.g. email.**
 4. Stage 4:
-
+> **Exploitation ->> Exploiting vulnerable systems after the victim after delivery.**
 5. Stage 5:
-
+> **Installation ->> Backdoor install, allowing persistent access.**
 6. Stage 6:
-
+> **C&C ->> Outbound communication with an external server, providing "hands on keyboard" access to the target's network.**
 7. Stage 7:
-
+> **Actions on Objectives ->> With "hands on keyboard" access, the intruder can accomplish their original goals (e.g. data exfiltration, etc.)
 
 #### Snort Rule Analysis
 
