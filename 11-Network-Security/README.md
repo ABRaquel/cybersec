@@ -16,7 +16,7 @@ The concept of defense in depth can be broken down into three different security
 
 3. Encryption, biometric fingerprint readers, firewalls, endpoint security, and intrusion detection systems are what type of security control?
 
-> **Data protection**
+> **Operational protection**
 
 #### Intrusion Detection and Attack indicators
 
