@@ -310,21 +310,21 @@ Now, we will work on another lab. Before you start, complete the following revie
 
 1. Name and define two ways an IDS connects to a network.
 
-   Answer 1:
+> **NIDS (network intrusion detection system), perimeter, will passively examine all network traffic, sometimes placed in a DMZ.**
 
-   Answer 2:
+> **HIDS (host-based intrusion detection system), host, usually an agent is installed on the host machine and analyzes the entire system (file modifications, logs, etc.)**
 
 2. Describe how an IPS connects to a network.
 
-   Answer:
+> **IPS will usually be placed between a firewall and a switch. Requires a high throughput device in order to analyze traffic at the full network speed.**
 
 3. What type of IDS compares patterns of traffic to predefined signatures and is unable to detect Zero-Day attacks?
 
-   Answer:
+> **Signature type based IDS.**
 
 4. Which type of IDS is beneficial for detecting all suspicious traffic that deviates from the well-known baseline and is excellent at detecting when an attacker probes or sweeps a network?
 
-   Answer:
+> **Anomaly type based IDS.**
 
 #### Defense in Depth
 
