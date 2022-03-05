@@ -330,33 +330,33 @@ Now, we will work on another lab. Before you start, complete the following revie
 
 1. For each of the following scenarios, provide the layer of Defense in Depth that applies:
 
-    1.  A criminal hacker tailgates an employee through an exterior door into a secured facility, explaining that they forgot their badge at home.
+    A) A criminal hacker tailgates an employee through an exterior door into a secured facility, explaining that they forgot their badge at home.
 
-> **Physical layer but also Policies, Procedures and Awareness, since the the criminal was allowed to tailgate.**
+    > **Physical layer but also Policies, Procedures and Awareness, since the the criminal was allowed to tailgate.**
 
-    2. A zero-day goes undetected by antivirus software.
+    B) A zero-day goes undetected by antivirus software.
 
-> **Application layer.**
+    > **Application layer.**
 
-    3. A criminal successfully gains access to HR’s database.
+    C) A criminal successfully gains access to HR’s database.
 
-> **Data layer.**
+    > **Data layer.**
 
-    4. A criminal hacker exploits a vulnerability within an operating system.
+    D) A criminal hacker exploits a vulnerability within an operating system.
 
-> **Host layer.**
+    > **Host layer.**
 
-    5. A hacktivist organization successfully performs a DDoS attack, taking down a government website.
+    E) A hacktivist organization successfully performs a DDoS attack, taking down a government website.
 
-> **Network layer.**
+    > **Network layer.**
 
-    6. Data is classified at the wrong classification level.
+    F) Data is classified at the wrong classification level.
 
-> **Policies, Procedures and Awareness layer.**
+    > **Policies, Procedures and Awareness layer.**
 
-    7. A state sponsored hacker group successfully firewalked an organization to produce a list of active services on an email server.
+    G) A state sponsored hacker group successfully firewalked an organization to produce a list of active services on an email server.
 
-> **Perimeter layer.**
+    > **Perimeter layer.**
 
 2. Name one method of protecting data-at-rest from being readable on hard drive.
 
@@ -368,7 +368,7 @@ Now, we will work on another lab. Before you start, complete the following revie
 
 4. What technology could provide law enforcement with the ability to track and recover a stolen laptop.
 
-> **Usually through WiFi, GPS and monitoring agents that could be installed on the laptop (e.g. "Find My" from Apple) 
+> **Usually through WiFi, GPS and monitoring agents that could be installed on the laptop (e.g. "Find My" from Apple)** 
 
 5. How could you prevent an attacker from booting a stolen laptop using an external hard drive?
 
@@ -395,7 +395,7 @@ Now, we will work on another lab. Before you start, complete the following revie
 
 5. Which type of firewall filters based solely on source and destination MAC address?
 
->> **MAC layer Firewall.*
+>> **MAC layer Firewall.**
 
 
 
