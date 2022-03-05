@@ -434,12 +434,12 @@ Answer the following:
 
 | TTP | Example | Findings |
 | --- | --- | --- | 
-| **Reconnaissance** |  How did they attacker locate the victim? | 
-| **Weaponization** |  What was it that was downloaded?|
-| **Delivery** |    How was it downloaded?|
-| **Exploitation** |  What does the exploit do?|
-| **Installation** | How is the exploit installed?|
-| **Command & Control (C2)** | How does the attacker gain control of the remote machine?|
+| **Reconnaissance** |  How did they attacker locate the victim? | Passive Recon |
+| **Weaponization** |  What was it that was downloaded? | EXE with a Trojan payload |
+| **Delivery** |    How was it downloaded? | Email |
+| **Exploitation** |  What does the exploit do? | Steals information |
+| **Installation** | How is the exploit installed? | Opening the infected file |
+| **Command & Control (C2)** | How does the attacker gain control of the remote machine? | 
 | **Actions on Objectives** | What does the software that the attacker sent do to complete it's tasks?|
 
 
