@@ -34,7 +34,7 @@ The concept of defense in depth can be broken down into three different security
 Name each of the seven stages for the Cyber Kill chain and provide a brief example of each.
 
 1. Stage 1: 
-> **Reconnaissance ->> Research and identification of target, email harvesting, etc.**
+> **Reconnaissance ->> Research and identification of target, email harvesting, port mapping, etc.**
 2. Stage 2:
 > **Weaponization ->> Embedding trojan with an exploit into a deliverable payload (e.g. PDF, DOCX, etc.)**
 3. Stage 3:
@@ -46,7 +46,7 @@ Name each of the seven stages for the Cyber Kill chain and provide a brief examp
 6. Stage 6:
 > **C&C ->> Outbound communication with an external server, providing "hands on keyboard" access to the target's network.**
 7. Stage 7:
-> **Actions on Objectives ->> With "hands on keyboard" access, the intruder can accomplish their original goals (e.g. data exfiltration, etc.)
+> **Actions on Objectives ->> With "hands on keyboard" access, the intruder can accomplish their original goals (e.g. data exfiltration, etc.)**
 
 #### Snort Rule Analysis
 
@@ -60,15 +60,15 @@ alert tcp $EXTERNAL_NET any -> $HOME_NET 5800:5820 (msg:"ET SCAN Potential VNC S
 
 1. Break down the Sort Rule header and explain what is happening.
 
-   Answer:
+> **Alerts to all inbound [$EXTERNAL_NET] TCP traffic from ports 5800-5820.**
 
 2. What stage of the Cyber Kill Chain does this alert violate?
 
-   Answer:
+> **Stage 1: Reconnaissance ->> Research and identification of target, email harvesting, port mapping, etc.**
 
 3. What kind of attack is indicated?
 
-   Answer:
+> **Indicator of attack by doing VNC scan**
 
 Snort Rule #2
 
@@ -78,21 +78,21 @@ alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"ET POLICY PE EXE or D
 
 1. Break down the Sort Rule header and explain what is happening.
 
-   Answer:
+> **Alerts to all inbound TCP HTTP traffic, port 80 for EXE or DLL files that are downloaded.** 
 
 2. What layer of the Defense in Depth model does this alert violate?
 
-   Answer:
+> **Policies, awareness and procedures.**
 
 3. What kind of attack is indicated?
 
-   Answer:
+> **Potential payload delivery through download of EXE and DLL.**
 
 Snort Rule #3
 
 - Your turn! Write a Snort rule that alerts when traffic is detected inbound on port 4444 to the local network on any port. Be sure to include the `msg` in the Rule Option.
 
-    Answer:
+> **```alert tcp $EXTERNAL_NET 4444 -> $HOME_NET any (msg: "ET TRAFFIC Potential Trojan & Crackdown Activity")```**
 
 ### Part 2: "Drop Zone" Lab
 
