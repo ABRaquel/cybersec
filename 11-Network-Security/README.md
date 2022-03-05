@@ -332,72 +332,70 @@ Now, we will work on another lab. Before you start, complete the following revie
 
     1.  A criminal hacker tailgates an employee through an exterior door into a secured facility, explaining that they forgot their badge at home.
 
-        Answer:
+> **Physical layer but also Policies, Procedures and Awareness, since the the criminal was allowed to tailgate.**
 
     2. A zero-day goes undetected by antivirus software.
 
-        Answer:
+> **Application layer.**
 
     3. A criminal successfully gains access to HR’s database.
 
-        Answer:
+> **Data layer.**
 
     4. A criminal hacker exploits a vulnerability within an operating system.
 
-        Answer:
+> **Host layer.**
 
     5. A hacktivist organization successfully performs a DDoS attack, taking down a government website.
 
-        Answer:
+> **Network layer.**
 
     6. Data is classified at the wrong classification level.
 
-        Answer:
+> **Policies, Procedures and Awareness layer.**
 
     7. A state sponsored hacker group successfully firewalked an organization to produce a list of active services on an email server.
 
-        Answer:
+> **Perimeter layer.**
 
 2. Name one method of protecting data-at-rest from being readable on hard drive.
 
-    Answer:
+> **Symmetric hard drive encryption (e.g. Bitlocker).**
 
 3. Name one method to protect data-in-transit.
 
-    Answer:
+> **HTTPS.**
 
 4. What technology could provide law enforcement with the ability to track and recover a stolen laptop.
 
-   Answer:
+> **Usually through WiFi, GPS and monitoring agents that could be installed on the laptop (e.g. "Find My" from Apple) 
 
 5. How could you prevent an attacker from booting a stolen laptop using an external hard drive?
 
-    Answer:
+> **Disable USB booting devices at the BIOS level and set an Administrator password to access/modify the BIOS.**
 
 
 #### Firewall Architectures and Methodologies
 
 1. Which type of firewall verifies the three-way TCP handshake? TCP handshake checks are designed to ensure that session packets are from legitimate sources.
 
-  Answer:
+> **Circuit-level Gateway.**
 
 2. Which type of firewall considers the connection as a whole? Meaning, instead of looking at only individual packets, these firewalls look at whole streams of packets at one time.
 
-  Answer:
+> **Stateful Firewall.**
 
 3. Which type of firewall intercepts all traffic prior to being forwarded to its final destination. In a sense, these firewalls act on behalf of the recipient by ensuring the traffic is safe prior to forwarding it?
 
-  Answer:
-
+> **Application-level Gateway.**
 
 4. Which type of firewall examines data within a packet as it progresses through a network interface by examining source and destination IP address, port number, and packet type- all without opening the packet to inspect its contents?
 
-  Answer:
-
+> **Packet Filtering.**
 
 5. Which type of firewall filters based solely on source and destination MAC address?
 
-  Answer:
+>> **MAC layer Firewall.*
 
 
 
