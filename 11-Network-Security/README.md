@@ -395,7 +395,7 @@ Now, we will work on another lab. Before you start, complete the following revie
 
 5. Which type of firewall filters based solely on source and destination MAC address?
 
->> **MAC layer Firewall.**
+> **MAC layer Firewall.**
 
 
 
@@ -421,23 +421,24 @@ Locate the following Indicator of Attack in Sguil based off of the following:
 Answer the following:
 
 1. What was the indicator of an attack?
-   - Hint: What do the details of the reveal? 
 
-    Answer: 
+> **Alert on Sguil, showing a sucessful file download.**
 
+![cap](/11-Network-Security/screenshots/cap.png)
+![alert](/11-Network-Security/screenshots/alert.png)
 
 2. What was the adversarial motivation (purpose of attack)?
 
-    Answer: 
+> **Steal confidential information**
 
 3. Describe observations and indicators that may be related to the perpetrators of the intrusion. Categorize your insights according to the appropriate stage of the cyber kill chain, as structured in the following table.
 
 | TTP | Example | Findings |
 | --- | --- | --- | 
-| **Reconnaissance** |  How did they attacker locate the victim? | Passive Recon |
-| **Weaponization** |  What was it that was downloaded? | EXE with a Trojan payload |
-| **Delivery** |    How was it downloaded? | Email |
-| **Exploitation** |  What does the exploit do? | Steals information |
+| **Reconnaissance** |  How did they attacker locate the victim? | Email farming, third party data leak |
+| **Weaponization** |  What was it that was downloaded? | File infected with JS Trojan JS/Nemucod payload |
+| **Delivery** |    How was it downloaded? | Spam email |
+| **Exploitation** |  What does the exploit do? |  |
 | **Installation** | How is the exploit installed? | Opening the infected file |
 | **Command & Control (C2)** | How does the attacker gain control of the remote machine? | 
 | **Actions on Objectives** | What does the software that the attacker sent do to complete it's tasks?|
