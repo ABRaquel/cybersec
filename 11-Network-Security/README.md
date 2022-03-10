@@ -422,7 +422,7 @@ Answer the following:
 
 1. What was the indicator of an attack?
 
-> **Alert on Sguil, showing a sucessful file download.**
+> **Critical Alert on Sguil, showing a sucessful file download.**
 
 ![cap](/11-Network-Security/screenshots/cap.png)
 ![alert](/11-Network-Security/screenshots/alert.png)
@@ -438,22 +438,16 @@ Answer the following:
 | **Reconnaissance** |  How did they attacker locate the victim? | Email farming, third party data leak |
 | **Weaponization** |  What was it that was downloaded? | File infected with JS Trojan JS/Nemucod payload |
 | **Delivery** |    How was it downloaded? | Spam email |
-| **Exploitation** |  What does the exploit do? |  |
-| **Installation** | How is the exploit installed? | Opening the infected file |
-| **Command & Control (C2)** | How does the attacker gain control of the remote machine? | 
-| **Actions on Objectives** | What does the software that the attacker sent do to complete it's tasks?|
-
-
-    Answer: 
-
+| **Exploitation** |  What does the exploit do? | Nemucod will instantiate three different ActiveX controls: WScript.Shell, MSXML2.XMLHTTP and ADODB.Stream. To make a long story short, Nemucod will use them to save an executable file to the temporary folder %TEMP% and to run it; right after that, Nemucod will open a legitimate PDF file in the browser: this document is uses as a decoy to let the user believe they're actually viewing a real invoice. |
+| **Installation** | How is the exploit installed? | JavaScript file downloads a simple EXE file which is then invoked directly in the background through the WScript.Shell ActiveX control. Right after that, the malware opens the decoy PDF document through the ADODB.Stream ActiveX control. Depending on the campaign, it also  downloads a DLL library which is then invoked by running rundll32.exe through the WScript.Shell ActiveX control. The DLL's entry point is the non-standard function name "DLLRegisterServer". Once again, right after that, the malware uses the ADODB.Stream ActiveX control to open the decoy PDF file. Another campaign will downloads a DLL library which is invoked through rundll32.exe; the entry point is still "DLLRegisterServer" and the decoy PDF document is always the same.|
+| **Command & Control (C2)** | How does the attacker gain control of the remote machine? | Gozi starts phoning home only after the reboot. This technique may be used to avoid detection in sandboxed environments. |
+| **Actions on Objectives** | What does the software that the attacker sent do to complete it's tasks?| Execution of these campaigns in our Sandbox showed that the executable files downloaded by Nemucod are used to retrieve a Trojan Downloader called Fareit or Pony Downloader, which in turn downloads another set of executable files containing the Gozi infostealer. |
 
 4. What are your recommended mitigation strategies?
 
-
-    Answer: 
-
+> **Increase cyber security training and awareness with staff. Especially around email and attachments.
 
 5. List your third-party references.
 
-    Answer: 
+> **https://www.certego.net/en/news/italian-spam-campaigns-using-js-nemucod-downloader/**
 
