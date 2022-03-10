@@ -332,7 +332,7 @@ Now, we will work on another lab. Before you start, complete the following revie
 
     A) A criminal hacker tailgates an employee through an exterior door into a secured facility, explaining that they forgot their badge at home.
 
-    > **Physical layer but also Policies, Procedures and Awareness, since the the criminal was allowed to tailgate.**
+    > **Physical layer but also Policies, Procedures and Awareness, since the employee allowed the threat actor to tailgate.**
 
     B) A zero-day goes undetected by antivirus software.
 
