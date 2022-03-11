@@ -16,7 +16,7 @@ The concept of defense in depth can be broken down into three different security
 
 3. Encryption, biometric fingerprint readers, firewalls, endpoint security, and intrusion detection systems are what type of security control?
 
-> **Operational protection**
+> **Technical Control**
 
 #### Intrusion Detection and Attack indicators
 
@@ -82,7 +82,7 @@ alert tcp $EXTERNAL_NET $HTTP_PORTS -> $HOME_NET any (msg:"ET POLICY PE EXE or D
 
 2. What layer of the Defense in Depth model does this alert violate?
 
-> **Policies, awareness and procedures.**
+> **Administrative control**
 
 3. What kind of attack is indicated?
 
