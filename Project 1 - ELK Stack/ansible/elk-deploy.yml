@@ -1,0 +1,42 @@
+---
+  - name: ELK Deployment
+    hosts: elk-stack
+    remote_user: azadmin
+    become: true
+    tasks:
+      - name: "Install Docker"
+        apt:
+          update_cache: yes
+          force_apt_get: yes
+          name: docker.io
+          state: present
+      - name: "Install Python3-pip"
+        apt:
+          name: python3-pip
+          force_apt_get: yes
+          state: present
+      - name: "Install Docker-Python3"
+        apt:
+          name: python3-docker
+          force_apt_get: yes
+          state: present
+      - name: "MEM Resize"
+        sysctl:
+          name: vm.max_map_count
+          value: 262144
+          state: present
+          reload: yes
+      - name: "Deploy ELK container"
+        docker_container:
+          name: elk
+          image: sebp/elk:761
+          state: present
+          restart_policy: always
+          published_ports:
+            - "5601:5601"
+            - "9200:9200"
+            - "5044:5044"
+      - name: "Docker on boot"
+        systemd:
+          name: docker.service
+          enabled: yes

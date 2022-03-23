@@ -1,0 +1,24 @@
+---
+  - name: "Deploy Filebeat and launch on boot"
+    hosts: webservers
+    become: yes
+    tasks:
+    - name: "Download Filebeat"
+      command: wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.4.0-amd64.deb
+    - name: "Install Filebeat"
+      command: dpkg -i filebeat-7.4.0-amd64.deb
+    - name: "Configure Filebeat"
+      copy: src=/etc/ansible/files/filebeat-cfg.yml dest=/etc/filebeat/filebeat.yml
+    - name: "Filebeat Modules"
+      command: filebeat modules enable system
+    - name: "Filebeat Setup"
+      command: filebeat setup --dashboards
+    - name: "Filebeat service"
+      service:
+        name: filebeat
+        state: started
+    - name: "Filebeat on boot"
+      systemd:
+        name: filebeat
+        enabled: yes
+        state: started
