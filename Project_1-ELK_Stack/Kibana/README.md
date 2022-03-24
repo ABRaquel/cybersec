@@ -80,9 +80,12 @@ From what website did the visitor's traffic originate?
 
 What do you think the user was doing?
 > User was downloading RPM package for Metricbeats.
+
 Was the file they downloaded malicious? If not, what is the file used for?
 > No. The file is used to deploy Metricbeats agent on a server for system stats recording.
+
 Is there anything that seems suspicious about this activity?
 > Not really, only that it originated from Facebook, which is an odd place. User could've been following a targetted ad on Facebook, since Elastic provides commercial services.
+
 Is any of the traffic you inspected potentially outside of compliance guidlines?
 > Without knowing the guidelines, there's nothing out of bounds with this traffic.
