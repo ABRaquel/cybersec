@@ -6,7 +6,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
- > - **[Filebeat Deployment Ansible Playbook](Ansible/filebeat-deploy.yml)**
+ > - **[Filebeat Deployment Ansible Playbook](ansible/filebeat-deploy.yml)**
 
 This document contains the following details:
 - Description of the Topology
@@ -69,7 +69,7 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it allows the sysadmin orchestration, deployment and management of server clusters, without having to manage individual servers. [^5]
 
-The **[playbook](Ansible/elk-deploy.yml)** implements the following tasks:
+The **[playbook](ansible/elk-deploy.yml)** implements the following tasks:
 - Docker Install
 - Package Management System - Python3-pip
 - Docker Python3 Install
@@ -106,8 +106,8 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy **[elk-deploy.yml](Ansible/elk-deploy.yml)**, **[filebeat-deploy.yml](Ansible/filebeat-deploy.yml)** and **[metricbeat-deploy.yml](Ansible/metricbeat-deploy.yml)** to ```/etc/ansible```
-- Copy **[filebeat-cfg.yml](Ansible/filebeat-cfg.yml)** and **[metricbeat-cfg.yml](Ansible/metricbeat-cfg.yml)** to ```/etc/ansible/files```
+- Copy **[elk-deploy.yml](ansible/elk-deploy.yml)**, **[filebeat-deploy.yml](ansible/filebeat-deploy.yml)** and **[metricbeat-deploy.yml](ansible/metricbeat-deploy.yml)** to ```/etc/ansible```
+- Copy **[filebeat-cfg.yml](ansible/filebeat-cfg.yml)** and **[metricbeat-cfg.yml](ansible/metricbeat-cfg.yml)** to ```/etc/ansible/files```
 - Update the **hosts** file to include **[Webservers]** server cluster and the **[ELK-Stack]** server.
 - Run the playbook, and navigate to **http://20.83.115.255:5601/** to check that the installation worked as expected.
 
@@ -115,7 +115,7 @@ SSH into the control node and follow the steps below:
 
 
 - Which file is the playbook? Where do you copy it?
-> Playbook file is **[elk-deploy.yml](Ansible/elk-deploy.yml)**, copy the file to ```/etc/ansible```
+> Playbook file is **[elk-deploy.yml](ansible/elk-deploy.yml)**, copy the file to ```/etc/ansible```
 - Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 > Update the **hosts** file in /etc/ansible with the machine IP you wish to deploy the ELK stack (ELK-Stack Server), Filebeat and Metricbeat (Webservers)
 - Which URL do you navigate to in order to check that the ELK server is running?
