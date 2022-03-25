@@ -79,7 +79,7 @@ The **[playbook](ansible/elk-deploy.yml)** implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![elk-docker-ps](Screenshots/elk-docker.png)
+![elk-docker-ps](https://github.com/ABRaquel/cybersec/blob/main/Project_1-ELK_Stack/Screenshots/elk-docker.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -95,7 +95,7 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 > * **Filebeat:** Filebeat monitors locations and collects log files, including log events. [^3]
 
-![filebeat](Screenshots/filebeat.png)
+![filebeat](https://github.com/ABRaquel/cybersec/blob/main/Project_1-ELK_Stack/Screenshots/filebeat.png)
 
 > * **Metricbeat:** Metricbeat records system-level CPU usage, memory, file system, network statistics, disk IO, and running processes on the system. [^4]
 
