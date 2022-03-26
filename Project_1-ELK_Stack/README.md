@@ -42,14 +42,16 @@ The configuration details of each machine may be found below.
 | Web-1 | Web-Server | 10.0.1.7 | Linux - Ubnt 18.04 LTS |
 | Web-2 | Web-Server | 10.0.1.4 | Linux - Ubnt 18.04 LTS |
 | Web-3 | Web-Server | 10.0.1.5 | Linux - Ubnt 18.04 LTS |
-| Elk-Stack | ELK Stack Server | 10.0.1.8 | Linux - Ubnt 18.04 LTS |
+| ELK-Stack | ELK Stack Server | 10.0.1.8 | Linux - Ubnt 18.04 LTS |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the **Jump Box** machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+**Jump Box** and **ELK-Stack** machine can accept connections from the Internet. Access to these machines is only allowed from the following IP addresses: 
 > - 96.82.204.202 [Corporate Static IP] 
+
+_Side note: I recommend having a P2S VPN for the Jump Box and ELK-Stack_
 
 Machines within the network can only be accessed by the **Jump Box** through **SSH**.
 - Which machine did you allow to access your ELK VM? What was its IP address?
