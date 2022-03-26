@@ -128,12 +128,18 @@ SSH into the control node and follow the steps below:
 > * ```sudo docker start [ansible_container]```
 > * ```sudo docker attach [ansible_container]```
 > * ```cd /etc/ansible```
-> * ```nano hosts``` - update hosts file (see _Using the Playbook_ for more details)
-> * ```curl -LJO https://github.com/ABRaquel/cybersec/blob/main/Project_1-ELK_Stack/ansible/elk-deploy.yml``` - copy elk-deploy.yml
-> * ```curl --create-dirs -O --output-dir files https://github.com/ABRaquel/cybersec/blob/main/Project_1-ELK_Stack/ansible/filebeat-cfg.yml && curl -O --output-dir files https://github.com/ABRaquel/cybersec/blob/main/Project_1-ELK_Stack/ansible/metricbeat-cfg.yml``` downloads the yml files into ```files``` folder inside ```/etc/ansible```
+> * ```nano hosts```
+>    * update hosts file (see _Using the Playbook_ for more details)
+> * ```curl -LJO https://github.com/ABRaquel/cybersec/blob/main/Project_1-ELK_Stack/ansible/elk-deploy.yml``` 
+>    * copy elk-deploy.yml
+> * ```curl --create-dirs -O --output-dir files https://github.com/ABRaquel/cybersec/blob/main/Project_1-ELK_Stack/ansible/filebeat-cfg.yml && curl -O --output-dir files https://github.com/ABRaquel/cybersec/blob/main/Project_1-ELK_Stack/ansible/metricbeat-cfg.yml``` 
+>    * downloads the yml files into ```files``` folder inside ```/etc/ansible```
 > * ```ansible-playbook elk-deploy.yml```
-> * ```ansible-playbook metricbeats-deploy.yml``` for Metricbeats install
-> * ```ansible-playbook filebeats-deply.yml``` for Filebeats install
+>    * for ELK install 
+> * ```ansible-playbook metricbeats-deploy.yml``` 
+>    * for Metricbeats install
+> * ```ansible-playbook filebeats-deply.yml``` 
+>    * for Filebeats install
 
 #### References:
 [^1]: https://www.nginx.com/resources/glossary/load-balancing/
