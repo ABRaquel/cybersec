@@ -115,7 +115,7 @@ SSH into the control node and follow the steps below:
 - Copy **[elk-deploy.yml](ansible/elk-deploy.yml)**, **[filebeat-deploy.yml](ansible/filebeat-deploy.yml)** and **[metricbeat-deploy.yml](ansible/metricbeat-deploy.yml)** to ```/etc/ansible```
 - Copy **[filebeat-cfg.yml](ansible/filebeat-cfg.yml)** and **[metricbeat-cfg.yml](ansible/metricbeat-cfg.yml)** to ```/etc/ansible/files```
 - Update the **hosts** file to include **[Webservers]** server cluster and the **[ELK-Stack]** server.
-- Run the playbook, and navigate to **http://20.83.115.255:5601/** to check that the installation worked as expected.
+- Run the playbook, and navigate to **http://EXTERNAL_IP:5601/** to check that the installation worked as expected.
 
 ![kibana](Screenshots/kibana.png)
 
