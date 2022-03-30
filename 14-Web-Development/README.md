@@ -316,7 +316,3 @@ Note that each one of these is a cookie that was granted to Ryan after logging i
 1. Finally, write a `curl` command using the same `--cookie ryancookies.txt` option, but attempt to access `http://localhost:8080/wp-admin/users.php`.
 
     - **Question:** What happens this time?
-
----
-
-### Submission Guidelines
