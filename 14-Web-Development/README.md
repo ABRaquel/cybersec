@@ -5,16 +5,22 @@
 Answer the following questions about the HTTP request and response process.
 
 1. What type of architecture does the HTTP request and response process occur in?
+> HTTP request and response occur in a client-server model architecture.
 
 2. What are the different parts of an HTTP request? 
+> **Request Line** contains the request method, **Headers** contains details on the resource requested (e.g., authentication) and **Whitespace** indicates the end of the request.
 
 3. Which part of an HTTP request is optional?
+> ```BODY```, optional set of data, can contain text or binary, or simply be empty.
 
 4. What are the three parts of an HTTP response?
+> **Status Line** contains the response status code, **Headers** contains for example the date, information on the server, etc., **Whitespace** separates response headers from the **Response Body** which contains the resource requested by the client.
 
 5. Which number class of status codes represents errors?
+> ```400-499``` for client errors and ```500-599``` for server errors.
 
 6. What are the two most common request methods that a security professional will encounter?
+> 
 
 7. Which type of HTTP request method is used for sending data?
 
