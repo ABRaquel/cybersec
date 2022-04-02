@@ -20,27 +20,35 @@ Answer the following questions about the HTTP request and response process.
 > ```400-499``` for client errors and ```500-599``` for server errors.
 
 6. What are the two most common request methods that a security professional will encounter?
-> 
+> ```GET``` and ```POST```.
 
 7. Which type of HTTP request method is used for sending data?
+> ```POST```
 
 8. Which part of an HTTP request contains the data being sent to the server?
+> ```BODY``` during an HTTP request is used to send additional information being send to the server.
 
 9. In which part of an HTTP response does the browser receive the web code to generate and style a web page?
+> > ```BODY``` during an HTTP response is where the web page is generated.
 
 #### Using curl
 
 Answer the following questions about `curl`:
 
 10. What are the advantages of using `curl` over the browser?
+> One of the main advantages of using ```curl``` is the ability to automate in a predicable way various tests, either server configurations, ensuring no data leak through HTTP responses, what type of responses the server allows and checking for various other vulnerabilities on a web server.[^1]
 
 11. Which `curl` option is used to change the request method?
+>```curl -X```[^2]
 
 12. Which `curl` option is used to set request headers?
+>```curl -H```[^2]
 
 13. Which `curl` option is used to view the response header?
+>```curl -I```[^2]
 
 14. Which request method might an attacker use to figure out which HTTP requests an HTTP server will accept?
+>```curl -X OPTIONS```[^3]
 
 #### Sessions and Cookies
 
@@ -55,6 +63,7 @@ Answer the following questions about sessions and cookies:
     Content-type: text/html
     Set-Cookie: cart=Bob
     ```
+>**```Set-Cookie: cart=Bob```**
 
 16. Which request header will continue the client's session?
 
@@ -63,6 +72,7 @@ Answer the following questions about sessions and cookies:
     Host: www.example.org
     Cookie: cart=Bob
     ```
+>**```Cookie: cart=Bob```**
 
 #### Example HTTP Requests and Responses
 
@@ -85,11 +95,19 @@ username=Barbara&password=password
 
 17. What is the request method?
 
+>```POST```
+
 18. Which header expresses the client's preference for an encrypted response?
+
+>```Upgrade-Insecure-Requests: 1```
 
 19. Does the request have a user session associated with it?
 
+>There's no presence of a cookie to preserve or continue the user session.
+
 20. What kind of data is being sent from this request body?
+
+>Authentication data.
 
 **HTTP Response**
 
@@ -112,13 +130,29 @@ X-XSS-Protection: 1; mode=block
 
 21. What is the response status code?
 
+>```HTTP/1.1 200 OK```
+
 22. What web server is handling this HTTP response?
+
+>```Server: Apache```
 
 23. Does this response have a user session associated to it?
 
+>Yes, under ```Set-Cookie: SessionID=5```.
+
 24. What kind of content is likely to be in the [page content] response body?
 
+> Most likely text in HTML format. ```Content-Type: text/html```
+
 25. If your class covered security headers, what security request headers have been included?
+
+>```Strict-Transport-Security: max-age=31536000; includeSubDomains``` -- enforces HTTPS access only, including subdomains. [^4]
+
+>```X-Content-Type: NoSniff``` -- protection against MIME sniffing, prevents the upload of disguised unsupported content. [^5]
+
+>```X-Frame-Options: DENY``` -- prevents the website from being loaded in a frame, prevents embedding. [^6]
+
+>```X-XSS-Protection: 1; mode=block``` -- stops page from loading if cross-site scripting is detected. [^7]
 
 #### Monoliths and Microservices
 
@@ -126,9 +160,15 @@ Answer the following questions about monoliths and microservices:
 
 26. What are the individual components of microservices called?
 
+> Front-end server, back-end server and a database.
+
 27. What is a service that writes to a database and communicates to other services?
 
+> Back-end server facilitates communications between other services and the database.
+
 28. What type of underlying technology allows for microservices to become scalable and have redundancy?
+
+> Containerization. [^8]
 
 #### Deploying and Testing a Container Set
 
@@ -136,16 +176,25 @@ Answer the following questions about multi-container deployment:
 
 29. What tool can be used to deploy multiple containers at once?
 
+>```docker-compose``` allows for the orchestration of multiple containers at the same time.
+
 30. What kind of file format is required for us to deploy a container set?
+
+>```docker-compose``` uses ```.yml```/```.yaml``` file format to orchestrate the spinning of containers.
 
 #### Databases
 
 31. Which type of SQL query would we use to see all of the information within a table called `customers`?
 
+>```SELECT * FROM customers;```
+
 32. Which type of SQL query would we use to enter new data into a table? (You don't need a full query, just the first part of the statement.)
 
-33. Why would we never run `DELETE FROM <table-name>;` by itself?
+>```INSERT INTO [TABLE] (COLUMNS)```
+>```VALUES ('DATA');```
 
+33. Why would we never run `DELETE FROM <table-name>;` by itself?
+> Using the above query would delete the entire table. Usually one will pair the query with ```WHERE```. [^9]
 ---
 
 ### Bonus Challenge Overview: The Cookie Jar
@@ -322,3 +371,14 @@ Note that each one of these is a cookie that was granted to Ryan after logging i
 1. Finally, write a `curl` command using the same `--cookie ryancookies.txt` option, but attempt to access `http://localhost:8080/wp-admin/users.php`.
 
     - **Question:** What happens this time?
+
+#### References:
+[^1]:https://isc.sans.edu/diary/Using+Curl+to+Retrieve+Malicious+Websites/8038
+[^2]:https://www.keycdn.com/support/popular-curl-examples
+[^3]:https://reqbin.com/req/c-d8nxa0fl/curl-options-request
+[^4]:https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
+[^5]:https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
+[^6]:https://credoinfolit.zendesk.com/hc/en-us/articles/360038339213-X-Frame-Options-Set-to-Deny
+[^7]:https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection
+[^8]:https://www.ibm.com/cloud/learn/containerization
+[^9]:https://www.techonthenet.com/sql/delete.php
