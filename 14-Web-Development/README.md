@@ -29,7 +29,7 @@ Answer the following questions about the HTTP request and response process.
 > ```BODY``` during an HTTP request is used to send additional information being send to the server.
 
 9. In which part of an HTTP response does the browser receive the web code to generate and style a web page?
-> > ```BODY``` during an HTTP response is where the web page is generated.
+> ```BODY``` during an HTTP response is where the web page is generated.
 
 #### Using curl
 
@@ -215,128 +215,31 @@ It is important for cybersecurity professionals to know how to manage cookies wi
 
   - For example, an HTTP server may be configured so that, in order to POST data to specific pages, clients need to have cookies or authentication information set in their request headers, which the server will verify.
 
-#### Revisiting curl
-
-Recall that you used `curl` to craft different kinds of requests for your `curl` activity, and that you saw how to use the Chrome extension Cookie-Editor to export and import cookies and swap sessions.
-
-There will be many systems in which you will need to test requests and cookies that will not connect to a browser or browser extension. 
-
-`curl` not only allows users to look through headers, send data, and authenticate to servers, but also to save and send cookies through two `curl` options: `--cookie-jar` and `--cookie`.
-
-These two options work exactly like Cookie-Editor, but on the command line. 
-
-- `--cookie-jar` allows a curl user to save the cookies set within a response header into a text file.
-
-- `--cookie` allows a user to specify a text file where a cookie is saved, in order to send a request with the cookies embedded in the request header.
-
-Let's look at how we can create a `curl` command that will log into a web page with a supplied username and password, and also save the server's response that should contain a cookie.
-
 #### Logging In and Saving Cookies with Curl
 
-If we want to use the `curl` command to log into an account, `Amanda`, with the password `password`, we use the following `curl` options:
-
-- `curl --cookie-jar ./amandacookies.txt --form "log=Amanda" --form "pwd=password" http://localhost:8080/wp-login.php --verbose`
-- `curl`: The tool that we are using.
-  
-- `--cookie-jar`: Specifies where we will save the cookies.
-  
-- `./amandacookies.txt`: Location and file where the cookies will be saved.
-  
-- `--form`: Lets us pick the login username and password forms that we set in our user info earlier. In this case it's our username.
-  
-- `log=Amanda`: How WordPress understands and accepts usernames.
-  
-- `--form`: Lets us pick the login username and password forms that we set in our user info earlier. In this case it's our password.
-  
-- `pwd=password`: How WordPress understands and accepts passwords.
-  
-- `http://localhost:8080/wp-login.php`: Our WordPress login page.
-  
-- `--verbose`: Outputs more specific description about the actions the command is taking.  
-
-Run the command:  `curl --cookie-jar ./amandacookies.txt --form "log=Amanda" --form "pwd=password" http://localhost:8080/wp-login.php --verbose`
-
-If the site confirms our credentials, it will give us a cookie in return, which `curl` will save in the cookie jar file `./amandacookies.txt`.
-
-Now let's look at how to use that saved cookie on a page that requires us to be logged in.
+![amanda](/14-Web-Development/screenshots/amanda.png)
 
 #### Using a Saved Cookie
 
-To use a saved cookie, we use the following `curl` syntax:
-
-- `curl --cookie ./amandacookies.txt http://localhost:8080/wp-admin/users.php`
-  - `curl`: The tool that we are using.
-    
-  - `--cookie`: Precedes the location of our saved cookie that we want to use.
-    
-  - `./amandacookies.txt`: Location and file where the cookies are saved.
-    
-  - `http://localhost:8080/wp-admin/users.php`: A page that requires authentication to see properly. Note that we are not going to the login page, because supplying a cookie in this instance assumes that we are already logged in.
-
-Now that we know how to use the `curl` cookie jar, let's look at what we need to do for this challenge.
+![logver](/14-Web-Development/screenshots/logver.png)
 
 ---
 
 ### Bonus Challenge Instructions: The Cookie Jar
-
-First, using Docker Compose, navigate to the Day 1 WordPress activity directory and bring up the container set:
-
-- `/home/sysadmin/Documents/docker_files`
-
-Using `curl`, you will do the following for the Ryan user:
-
-  - Log into WordPress and save the user's cookies to a cookie jar.
-
-  - Test a WordPress page by using a cookie from the cookie jar.
-
-  - Pipe the output from the cookie with `grep` to check for authenticated page access.
-
-  - Attempt to access a privileged WordPress admin page.
-
-#### Step 1: Set Up
-
-Create two new users: Amanda and Ryan.   
-
-1. Navigate to `localhost:8080/wp-admin/`
-
-2. On the left-hand toolbar, hover over **Users** and click **Add New**.
-
-3. Enter the following information to create the new user named Amanda.
-
-    - Username: `Amanda`
-    - Email: `amanda@email.com`
-
-4. Skip down to password:
-
-    - Password: `password`
-    - Confirm Password: Check the box to confirm use of weak password.
-    - Role: `Administrator`
-
-5. Create another user named Ryan.
-
-    - Username: `Ryan`
-    - Email: `ryan@email.com`
-
-6. Skip down to password:
-
-    - Password: `123456`
-    - Confirm Password: Check the box to confirm use of weak password.
-    - Role: `Editor`
-
-7. Log out and log in with the following credentials:
-
-    - Username: `Amanda`
-    - Password: `password`
-
-#### Step 2: Baselining
+#### Baselining
 
 For these "baselining" steps, you'll want to log into two different types of accounts to see how the WordPress site looks at the `localhost:8080/wp-admin/users.php` page.  We want to see how the Users page looks from the perspective of an administrator, vs. a regular user.
 
 1. Using your browser, log into your WordPress site as your sysadmin account and navigate to `localhost:8080/wp-admin/users.php`, where we previously created the user Ryan. Examine this page briefly. Log out.
 
+![users](/14-Web-Development/screenshots/wpuser.png)
+
+
 2. Using your browser, log into your Ryan account and attempt to navigate to `localhost:8080/wp-admin/index.php`. Note the wording on your Dashboard.
 
 3. Attempt to navigate to `localhost:8080/wp-admin/users.php`. Note what you see now.
+
+![wppermissions](/14-Web-Development/screenshots/wppermission.png)
 
 Log out in the browser.
 
@@ -344,15 +247,29 @@ Log out in the browser.
 
 Navigate to `~/Documents` in a terminal to save your cookies.
 
-1. Construct a `curl` request that enters two forms: `"log={username}"` and `"pwd={password}"` and goes to `http://localhost:8080/wp-login.php`. Enter Ryan's credentials where there are placeholders.
+1. Construct a `curl` request that enters two forms: `"log={username}"` and `"pwd={password}"` and goes to `http://localhost:8080/wp-login.php`. Enter Ryan's credentials where there are placeholders. 
 
-    - **Question:** Did you see any obvious confirmation of a login? (Y/N)
+> ```curl --form "log=Ryan" --form "pwd=password" http://localhost:8080/wp-login.php --verbose```
+
+**Question:** Did you see any obvious confirmation of a login? 
+> **Yes.** A logged in cookie was set.
+
+![ryanloggedin](/14-Web-Development/screenshots/curl_ryan_login.png)
+
+
 
 2. Construct the same `curl` request, but this time add the option and path to save your cookie: `--cookie-jar ./ryancookies.txt`. This option tells `curl` to save the cookies to the `ryancookies.txt` text file.
 
+> ```curl --cookie-jar ./ryancookies.txt --form "log=Ryan" --form "pwd=password" http://localhost:8080/wp-login.php --verbose```
+
+
 3. Read the contents of the `ryancookies.txt` file.
 
-   - **Question:** How many items exist in this file?
+**Question:** How many items exist in this file?
+> Three items.
+
+![ryan-cookies](/14-Web-Development/screenshots/ryan_cookies.png)
+
 
 Note that each one of these is a cookie that was granted to Ryan after logging in.
 
@@ -360,17 +277,27 @@ Note that each one of these is a cookie that was granted to Ryan after logging i
 
 1. Craft a new `curl` command that now uses the `--cookie` option, followed by the path to your cookies file. For the URL, use `http://localhost:8080/wp-admin/index.php`.
 
-   - **Question:** Is it obvious that we can access the Dashboard? (Y/N)
+**Question:** Is it obvious that we can access the Dashboard?
+> **Yes**. Dashboard has been loaded, including the dashboard navigation pane.
+
+![ryan_dashboard](/14-Web-Development/screenshots/ryan_dashboard.png)
 
 2. Press the up arrow on your keyboard to run the same command, but this time, pipe `| grep Dashboard` to the end of your command to return all instances of the word `Dashboard` on the page.
 
-    - **Question:**  Look through the output where `Dashboard` is highlighted. Does any of the wording on this page seem familiar? (Y/N) If so, you should be successfully logged in to your Editor's dashboard.
+**Question:**  Look through the output where `Dashboard` is highlighted. Does any of the wording on this page seem familiar?
 
+> **Yes.** One can verify what the _Editor_ role has access to, for example the ability to post, media, etc.
+
+![ryan-dash2](/14-Web-Development/screenshots/ryan_dash2.png) 
 #### Step 5: Test the Users.php Page
 
 1. Finally, write a `curl` command using the same `--cookie ryancookies.txt` option, but attempt to access `http://localhost:8080/wp-admin/users.php`.
 
-    - **Question:** What happens this time?
+**Question:** What happens this time?
+
+> Access was denied to that specific page.
+
+![ryan-denied](/14-Web-Development/screenshots/ryan_denied.png)
 
 #### References:
 [^1]:https://isc.sans.edu/diary/Using+Curl+to+Retrieve+Malicious+Websites/8038
