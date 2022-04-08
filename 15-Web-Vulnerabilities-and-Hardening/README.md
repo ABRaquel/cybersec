@@ -22,7 +22,8 @@
 
 To help **mitigate** a brute force attack of this nature, it would be recommended to implement **2FA**, **automatic lockout** after X amount of login attempts, paired with a system like **Fail2Ban**[^1], where the IP address would be banned as well.
 
+### Web Application 3: Where's the BeEF?
 
 
-### References:
+#### References:
 [^1]: https://www.fail2ban.org/wiki/index.php/Main_Page
