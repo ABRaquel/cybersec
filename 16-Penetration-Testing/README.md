@@ -121,7 +121,7 @@ Host script results:
 
 > SMB vulnerability which gives write access to a samba share and execute code as root. [^2]
 
-3. What mitigation strategies can you recommendations for the client to protect their server:5
+3. What mitigation strategies can you recommendations for the client to protect their server:
 
 > Update and patch vsFTPd and SMB to the latest stable version.
 
