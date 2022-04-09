@@ -1,0 +1,85 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2022-04-09 09:55 PDT
+Nmap scan report for 192.168.0.10
+Host is up (0.0027s latency).
+Not shown: 977 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+| ftp-vsftpd-backdoor: 
+|   VULNERABLE:
+|   vsFTPd version 2.3.4 backdoor
+|     State: VULNERABLE (Exploitable)
+|     IDs:  CVE:CVE-2011-2523  BID:48539
+|       vsFTPd version 2.3.4 backdoor, this was reported on 2011-07-04.
+|     Disclosure date: 2011-07-03
+|     Exploit results:
+|       Shell command: id
+|       Results: uid=0(root) gid=0(root)
+|     References:
+|       https://www.securityfocus.com/bid/48539
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-2523
+|       http://scarybeastsecurity.blogspot.com/2011/07/alert-vsftpd-download-backdoored.html
+|_      https://github.com/rapid7/metasploit-framework/blob/master/modules/exploits/unix/ftp/vsftpd_234_backdoor.rb
+22/tcp   open  ssh
+23/tcp   open  telnet
+25/tcp   open  smtp
+53/tcp   open  domain
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+512/tcp  open  exec
+513/tcp  open  login
+514/tcp  open  shell
+1099/tcp open  rmiregistry
+1524/tcp open  ingreslock
+2049/tcp open  nfs
+2121/tcp open  ccproxy-ftp
+3306/tcp open  mysql
+5432/tcp open  postgresql
+5900/tcp open  vnc
+6000/tcp open  X11
+6667/tcp open  irc
+8009/tcp open  ajp13
+8180/tcp open  unknown
+MAC Address: 00:15:5D:00:04:03 (Microsoft)
+
+Host script results:
+| smb-enum-shares: 
+|   account_used: <blank>
+|   \\192.168.0.10\ADMIN$: 
+|     Type: STYPE_IPC
+|     Comment: IPC Service (metasploitable server (Samba 3.0.20-Debian))
+|     Users: 1
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: <none>
+|   \\192.168.0.10\IPC$: 
+|     Type: STYPE_IPC
+|     Comment: IPC Service (metasploitable server (Samba 3.0.20-Debian))
+|     Users: 1
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|   \\192.168.0.10\opt: 
+|     Type: STYPE_DISKTREE
+|     Comment: 
+|     Users: 1
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: <none>
+|   \\192.168.0.10\print$: 
+|     Type: STYPE_DISKTREE
+|     Comment: Printer Drivers
+|     Users: 1
+|     Max Users: <unlimited>
+|     Path: C:\var\lib\samba\printers
+|     Anonymous access: <none>
+|   \\192.168.0.10\tmp: 
+|     Type: STYPE_DISKTREE
+|     Comment: oh noes!
+|     Users: 1
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|_    Anonymous access: READ/WRITE
+
+Nmap done: 1 IP address (1 host up) scanned in 7.38 seconds
