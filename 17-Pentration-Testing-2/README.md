@@ -102,6 +102,10 @@ B. Open a Meterpreter shell.
  
 C. Run the command that displays the target's computer system information:
 
-   > Answer: ```systeminfo```
+   > Answer: From the shell ```systeminfo```. If from Meterpreter, it would be ```sysinfo```
 
+**Shell**
 ![systeminfo](/17-Pentration-Testing-2/screenshots/sysinfo.png)
+
+**Meterpreter**
+![sysinfo2](/17-Pentration-Testing-2/screenshots/sysinfo2.png)
