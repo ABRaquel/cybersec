@@ -1,5 +1,9 @@
 ### Submission
 You've been provided full access to the network and are getting ping responses from the CEO’s workstation.
+
+#### Report
+
+* [Final Report](/17-Pentration-Testing-2/supporting_docs/Report.pdf)
  
 1. Perform a service and version scan using Nmap to determine which services are up and running:
 
