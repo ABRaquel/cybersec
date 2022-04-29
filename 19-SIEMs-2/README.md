@@ -5,11 +5,23 @@ Note: This is a public-facing windows server that VSI employees access.
 #### Question 1
 - Several users were impacted during the attack on March 25th.
 - Based on the attack signatures, what mitigations would you recommend to protect each user account? Provide global mitigations that the whole company can use and individual mitigations that are specific to each user.
+
+**Server Attack**
+![win-attack](screenshots/win-attack.png)
+
+**Baseline normal server usage.**
+![win-signature](screenshots/win-signature.png)
+
+>By comparing normal server operations to the logs of the attack, we can see that the server was under severe stress. By initiating multiple attempts are resetting the user password, it resulted in the account being locked out. Under normal operations, there were 295 user password reset, under attack it raised to 2128.
+>
+> Mitigation would include geo-ip block to the area where the company is located, implement a VPN with 2FA using RADIUS. 
+
   
 #### Question 2
 - VSI has insider information that JobeCorp attempted to target users by sending "Bad Logins" to lock out every user.
 - What sort of mitigation could you use to protect against this?
-  
+
+> I would apply the same mitigation as outlined above. Implement automatic IP ban after several X attempts at logging in.
 
 ### Part 2: Apache Webserver Attack:
 
