@@ -33,6 +33,7 @@ Note: This is a public-facing windows server that VSI employees access.
 
 - Provide a screen shot of the geographic map that justifies why you created this rule. 
 
+![search-rule](screenshots/search_country.png)
 ![dashboard](screenshots/dashboard.png)
   
 #### Question 2
