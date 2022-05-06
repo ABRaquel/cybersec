@@ -28,13 +28,19 @@ Note: This is a public-facing windows server that VSI employees access.
 #### Question 1
 - Based on the geographic map, recommend a firewall rule that the networking team should implement.
 - Provide a "plain english" description of the rule.
-  - For example: "Block all incoming HTTP traffic where the source IP comes from the city of Los Angeles."
+
+> Deny all incoming HTTP/HTTPS traffic from Ukraine.
+
 - Provide a screen shot of the geographic map that justifies why you created this rule. 
+
+![dashboard](screenshots/dashboard.png)
   
 #### Question 2
 
 - VSI has insider information that JobeCorp will launch the same webserver attack but use a different IP each time in order to avoid being stopped by the rule you just created.
 
 - What other rules can you create to protect VSI from attacks against your webserver?
-  - Conceive of two more rules in "plain english". 
-  - Hint: Look for other fields that indicate the attacker.
+
+> Deny all incoming HTTP/HTTPS traffic with HTTP Method is ```POST /VSI_Account_logon.php HTTP/1.1``` and User-Agent is ```Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.2; SV1; .NET CLR 2.0.50727987787; InfoPath.1)```
+
+![user-agent](screenshots/user_agent.png)
