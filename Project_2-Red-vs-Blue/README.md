@@ -1,7 +1,7 @@
 ### Presentation
 
-[Presentation Project 2 - Red vs Blue](https://docs.google.com/presentation/d/1o5kP7RrTumLeOpAKAgcN4QbE0NhggUn0IqP9X8dSDVE/edit?usp=sharing)
-[Presentation Project 2 - Red vs Blue - PDF]
+* [Presentation Project 2 - Red vs Blue](https://docs.google.com/presentation/d/1o5kP7RrTumLeOpAKAgcN4QbE0NhggUn0IqP9X8dSDVE/edit?usp=sharing)
+* [Presentation Project 2 - Red vs Blue - PDF](/Project_2-Red-vs-Blue/documentation/Project%202%20-%20Red%20vs%20Blue.pdf)
 
 ### Day 1 Deliverables
 
