@@ -1,6 +1,7 @@
 ### Presentation
 
-PLACEHOLDER LINK
+[Presentation Project 2 - Red vs Blue](https://docs.google.com/presentation/d/1o5kP7RrTumLeOpAKAgcN4QbE0NhggUn0IqP9X8dSDVE/edit?usp=sharing)
+[Presentation Project 2 - Red vs Blue - PDF]
 
 ### Day 1 Deliverables
 
